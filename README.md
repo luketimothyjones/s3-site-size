@@ -1,6 +1,7 @@
 # S3 Site Size
 
-A WordPress plugin that allows multisite admins to host child-site data on AWS S3
+A WordPress plugin that allows various ways of displaying aite sizes of child sites hosted on AWS S3.
+
 
 ----
 ### Functionality in brief  
