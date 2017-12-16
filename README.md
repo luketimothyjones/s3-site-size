@@ -28,4 +28,4 @@ A WordPress plugin that allows multisite admins to host child-site data on AWS S
     
     Example:
         Get the size of the current site, don't display a spinner while waiting, and force the data to be current (also updates cache)
-        [s3ss_display_site_size spinner='false' force_update='true']
+            [s3ss_display_site_size spinner='false' force_update='true']
