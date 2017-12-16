@@ -44,7 +44,7 @@ A WordPress plugin that allows multisite admins to host child-site data on AWS S
         }
     
     :: Example ::
-        jQuery(document).ready( function() {
+        jQuery(document).ready(function() {
             jQuery.post(ajaxurl, {'action': 's3ss_get_site_size'},
                 function(data) {
                     let space_used_elem = jQuery('#mydiv');
