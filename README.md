@@ -34,7 +34,9 @@ S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filt
     
     :: Example ::
         [s3ss_display_site_size spinner='false' force_update='true']  
-            Get the size of the current site, don't display a spinner while waiting, and force the data to be current (also updates cache)
+            Get the size of the current site, don't display a spinner while waiting, and force the data to be current
+            (also updates cache)
+            
             
 #### AJAX API
 
@@ -61,6 +63,7 @@ S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filt
         });
 
 
-#### Pro-Sites Integration
-    If you have Pro-Sites installed on your network, S3 Site Size will automatically overwrite the Pro-Sites dashboard display.
+#### Pro-Sites Integration  
+
+If you have Pro-Sites installed on your network, S3 Site Size will automatically overwrite the Pro-Sites dashboard display.
     
