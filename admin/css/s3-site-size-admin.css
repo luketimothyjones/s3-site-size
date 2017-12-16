@@ -1,0 +1,83 @@
+/**
+ * S3 Site Size settings styling
+ *
+ * @link       https://aboundant.com
+ * @since      1.0.0
+ *
+ * @package    S3_Site_Size
+ * @subpackage S3_Site_Size/admin/css
+ *
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+**/
+
+
+.form-table {
+    max-width: 1100px;
+    }
+    
+    .form-table th {
+        font-weight: 400;
+    }
+
+    .form-table td,
+    .form-table input[type="text"],
+    .form-table input[type="password"] {
+        height: 35px;
+        width:  350px;
+    }
+    
+    .form-table input[type="number"] {
+        height: 35px;
+        width:  100px;
+    }
+    
+     @media (min-width: 1036px) and (max-width: 1174px) {
+        .form-table th {
+            width: 300px;
+        }
+    }
+    
+    @media (min-width: 786px) and (max-width: 1035px) {
+        .form-table th {
+            width:       400px;
+            line-height: 1.4em;
+        }
+    }
+    
+    @media (max-width: 786px) {
+        .form-table th {
+            padding-bottom: 5px;
+            padding-left: 2px;
+            line-height: 1.3em;
+            margin-top: 15px;
+        }
+    }
+    
+    #s3ss-site {
+        margin-top:  5px;
+        margin-right: 10px;
+        height: 35px;
+        width:  250px;
+    }
+    
+    #s3ss-site.s3ss-error {
+        border-color: rgba(255, 0, 0, .5);
+        background-color: rgba(255, 0, 0, .1);
+    }
+    
+    #s3ss-force-refresh {
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    
+    #s3ss-fr-spinner {
+        margin-top: 1px;
+        margin-left: 5px;
+        height: 1.2em;
+        }
+        
+        #s3ss-fr-spinner.s3ss-hidden {
+            display: none;
+}
