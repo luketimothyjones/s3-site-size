@@ -42,6 +42,11 @@ S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filt
 
     Endpoint 's3ss_get_site_size'
     
+    Gets the current site's size [requires 'upload_files' capability]
+    
+    :: Parameters ::
+        force_update :: Forces the data to be updated before returning
+        
     :: Returns ::
         JSON Object {
           allowed_bytes :: Amount of data the user is allowed to use in bytes
@@ -52,7 +57,7 @@ S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filt
     
     :: Example ::
         jQuery(document).ready(function() {
-            jQuery.post(ajaxurl, {'action': 's3ss_get_site_size'},
+            jQuery.post(ajaxurl, {action: 's3ss_get_site_size', force_update: true},
                 function(data) {
                     let space_used_elem = jQuery('#mydiv');
                     let json = JSON.parse(data);
@@ -61,6 +66,17 @@ S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filt
                 }
             );
         });
+        
+        
+     Endpoint 's3ss_force_update'
+     
+     Forces the provided site's size to be updated [requires manage_network_options capability]
+     
+     :: Parameters ::
+        site :: Either a blog ID (ex: 101) or a blog slug (ex: mysite). Note: the slug is not the site's FQDN!
+        
+     :: Returns ::
+        Raw string :: site size in bytes. This will change soon to return the same JSON as s3ss_get_site_size.
 
 
 #### Pro-Sites Integration  
