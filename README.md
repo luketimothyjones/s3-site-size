@@ -3,9 +3,9 @@
 A WordPress plugin that allows multisite admins to host child-site data on AWS S3
 
 ----
-##Functionality in brief:  
+## Functionality in brief:  
 
-###Shortcodes  
+### Shortcodes  
 
 [s3ss_display_site_size]  
 :: *Gets the current site's size via AJAX. What it does afterwards is customizable.*
