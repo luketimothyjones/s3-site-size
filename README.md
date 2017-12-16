@@ -1,6 +1,6 @@
 # S3 Site Size
 
-A WordPress plugin that allows various ways of displaying aite sizes of child sites hosted on AWS S3.
+A WordPress plugin that provides several methods for displaying the amount of storage space used by child sites hosted on AWS S3.
 
 
 ----
