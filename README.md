@@ -5,6 +5,10 @@ A WordPress plugin that allows multisite admins to host child-site data on AWS S
 ----
 ### Functionality in brief  
 
+#### WordPress Core
+    S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filter. This allows other plugins to seemlessly pull the information from S3 (plus the site's local space usage).
+    
+
 #### Shortcodes  
 
     [s3ss_display_site_size]  
@@ -54,3 +58,7 @@ A WordPress plugin that allows multisite admins to host child-site data on AWS S
                 }
             );
         });
+
+
+#### Pro-Sites Integration
+    If you have Pro-Sites installed on your network, S3 Site Size will automatically overwrite the Pro-Sites dashboard display.
