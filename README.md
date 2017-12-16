@@ -62,3 +62,4 @@ A WordPress plugin that allows multisite admins to host child-site data on AWS S
 
 #### Pro-Sites Integration
     If you have Pro-Sites installed on your network, S3 Site Size will automatically overwrite the Pro-Sites dashboard display.
+    
