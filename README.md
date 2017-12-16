@@ -5,8 +5,11 @@ A WordPress plugin that allows multisite admins to host child-site data on AWS S
 Functionality in brief:
 
 Shortcode [s3ss_display_site_size]
+
   Gets the current site's size via AJAX. What it does afterwards is customizable.
+  
      Parameters:
+     
        callback
          :: Name of a JavaScript function in AJAX callback format
          :: Will be passed a JSON object as described in s3ss_get_site_size_ajax_handler
