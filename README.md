@@ -53,9 +53,9 @@ If you have Pro-Sites installed on your network, S3 Site Size will automatically
     
     :: Parameters ::
         force_update :: Forces the data to be updated before returning
-        
-    :: Returns ::
-        JSON Object {
+    
+    :: Returns ::
+        JSON Object {
           allowed_bytes :: Amount of storage space the site is allowed to use in bytes
           used_bytes    :: Amount of storage space used by site in bytes
           used_percent  :: Percent of allowed storage space used (allowed_bytes / used_bytes)
