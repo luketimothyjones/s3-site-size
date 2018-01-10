@@ -9,7 +9,7 @@ A WordPress plugin that provides several methods for displaying the amount of st
 
 #### WordPress Core  
 
-S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filter. This allows other plugins to seemlessly pull the information from S3 (plus the site's local space usage).
+S3 Site Size works in part by hooking into WordPress's 'pre_get_space_used' filter. This allows other plugins to seamlessly pull the information from S3 (plus the site's local space usage).
     
 
 #### Pro-Sites Integration  
@@ -56,10 +56,10 @@ If you have Pro-Sites installed on your network, S3 Site Size will automatically
         
     :: Returns ::
         JSON Object {
-          allowed_bytes :: Amount of data the user is allowed to use in bytes
-          used_bytes    :: Amount of data used by user in bytes
-          used_percent  :: Percent of data used (allowed_bytes / used_bytes)
-          used_readable :: Human-readable size  (highest size unit + two decimal places)
+          allowed_bytes :: Amount of storage space the site is allowed to use in bytes
+          used_bytes    :: Amount of storage space used by site in bytes
+          used_percent  :: Percent of allowed storage space used (allowed_bytes / used_bytes)
+          used_readable :: Human-readable size (applicable size unit to two decimal places)
         }
     
     :: Example ::
