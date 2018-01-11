@@ -53,15 +53,15 @@ If you have Pro-Sites installed on your network, S3 Site Size will automatically
     
     :: Parameters ::
         force_update :: Forces the data to be updated before returning
-    
-    :: Returns ::
-        JSON Object {
-          allowed_bytes :: Amount of storage space the site is allowed to use in bytes
-          used_bytes    :: Amount of storage space used by site in bytes
-          used_percent  :: Percent of allowed storage space used (allowed_bytes / used_bytes)
-          used_readable :: Human-readable size (applicable size unit to two decimal places)
+        
+    :: Returns ::
+        JSON Object {
+            allowed_bytes :: Amount of storage space the site is allowed to use in bytes
+            used_bytes    :: Amount of storage space used by site in bytes
+            used_percent  :: Percent of allowed storage space used (allowed_bytes / used_bytes)
+            used_readable :: Human-readable size (applicable size unit to two decimal places)
         }
-    
+        
     :: Example ::
         jQuery(document).ready(function() {
             jQuery.post(ajaxurl, {action: 's3ss_get_site_size', force_update: true},
