@@ -39,7 +39,7 @@ function s3ss_get_sum($key_prefix, $delim, $client) {
 // ----
 function s3ss_get_semaphore($site_id) {
     // Semaphore is set, update is already in progress
-    if (get_site_option("s3ss_{$site_id}_update_semaphore")) {
+    if (get_site_option("s3ss_{$site_id}_update_semaphore") === true) {
         return false;
     }
     
@@ -296,8 +296,7 @@ function s3ss_get_site_size_ajax_handler() {
         wp_die("You do not have permission to view this information.");
     }
     
-    $force_update = $_POST['force_update'];
-    $force_update = isset($force_update) && $force_update === 'true';
+    $force_update = isset($_POST['force_update']) && $_POST['force_update'] === 'true';
     $size         = s3ss_get_site_size($force_update);
     $allowed      = get_space_allowed();
     $formatted    = size_format($size, 2);
