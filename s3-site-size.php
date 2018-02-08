@@ -68,7 +68,6 @@ if (is_admin() && is_main_site()) {
 }
 
 // Load S3 functionality site-wide
-if (strpos($_SERVER['SERVER_NAME'], 'aboundant') === 0 &&
-    strpos($_SERVER['REQUEST_URI'], '/wp-admin/') !== false) {
+if (strpos($_SERVER['REQUEST_URI'], '/wp-admin/') === 0) {
     require(plugin_dir_path(__FILE__) . '/includes/s3-site-size-main.php');
 }
