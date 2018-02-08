@@ -78,7 +78,7 @@ function s3ss_get_size_from_s3($site_id) {
     $ab_site_size_test_id = false;  // Force specific site ID when on the above domain
     // -----
     
-    if ($staging_site && $ab_site_size_test_id && strpos($_SERVER['SERVER_NAME'], $staging_site) !== false) {
+    if ($staging_site && $ab_site_size_test_id && strpos($_SERVER['SERVER_NAME'], $staging_site)) {
         $site_id = $ab_site_size_test_id;
     }
 
@@ -104,8 +104,8 @@ function s3ss_get_size_from_s3($site_id) {
     
     try {
         // Pull in the size of the local upload directory
-        $site_size = get_dirsize(wp_upload_dir()['basedir']);
-        
+        $site_size = get_dirsize(wp_upload_dir()['basedir'] . '/');
+
         // If we're on the parent site, only get the top-level objects
         $prefix = ($site_id == "1") ? $s3_uploads_folder : $child_sites_full_path . $site_id . '/';
         
@@ -219,7 +219,7 @@ function s3ss_get_unexpired_site_size($site_id) {
     if ($result === null || ($time_since > $db_cache_duration)) {
         
         // No other update was in progress
-        if (s3ss_get_semaphore($site_id)) {
+        if (s3ss_get_semaphore($site_id) === true) {
             $size = s3ss_update_cached_site_size($site_id);
             s3ss_release_semaphore($site_id);
             return $size;
@@ -247,7 +247,7 @@ function s3ss_get_site_size($force_update=false) {
      *     :: Forces the cached value to be updated before returning
     **/
     
-    $site_id = get_blog_details(['domain' => $_SERVER['SERVER_NAME']])->blog_id;
+    $site_id = get_blog_details()->blog_id;
     
     if ($force_update === true) {
         return s3ss_update_cached_site_size($site_id);
@@ -293,6 +293,7 @@ function s3ss_get_site_size_ajax_handler() {
     // This may need to be tweaked for Pro-Sites
     
     if (!current_user_can('upload_files')) {
+        echo 'whoops';
         wp_die("You do not have permission to view this information.");
     }
     
